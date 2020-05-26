@@ -3,10 +3,13 @@ import Prismic from 'prismic-javascript'
 import { RichText, Date } from 'prismic-reactjs'
 import { client, linkResolver, hrefResolver } from '../prismic-configuration'
 import Link from 'next/link'
+import { Title } from "../components/atoms";
 const BlogHome = props => (
   <div>
     <img src={props.home.data.image.url} alt="avatar image" />
-    <h1>a {RichText.asText(props.home.data.headline)}</h1>
+    <Title tag="h1">
+      {RichText.asText(props.home.data.headline)}
+    </Title>
     <p>{RichText.asText(props.home.data.description)}</p>
 
     <ul>

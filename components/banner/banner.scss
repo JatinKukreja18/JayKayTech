@@ -1,0 +1,62 @@
+@import '../../variables.scss';
+.new-banner-wrapper {
+    height: calc(90vh - 80px);
+    min-height: 450px;
+    max-height: 700px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    background-image: url(/assets/images/banner/4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+// .banner-image {
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     object-fit: cover;
+//     z-index: -1;
+// }
+
+//  white slant section
+.new-banner-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 63%;
+    z-index: 1;
+    display: block;
+    border-style: solid;
+    border-width: 700px 23vw 0px 0px;
+    border-color: #fff transparent transparent #fff;
+    z-index: 0;
+}
+.banner-content-row,
+.banner-content-row .ant-col {
+    height: 100%;
+}
+.banner-content-row .ant-col {
+    align-items: center;
+    display: flex;
+}
+.banner-cta {
+    margin-bottom: 20px;
+}
+.subtext-banner {
+    margin: 0;
+    font-weight: 700;
+    color: #333;
+    font-size: 16px;
+    margin-top: 0;
+    display: block;
+}
+@media only screen and (max-width: $screen-xs-max) {
+    .new-banner-wrapper::before {
+        width: 100%;
+        border-color: #ffffff94;
+    }
+}

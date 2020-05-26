@@ -1,0 +1,55 @@
+@import '../../variables.scss';
+.errorPage {
+    .ant-row {
+        width: 100%;
+    }
+
+    .content-text {
+        a {
+            margin-left: 5px;
+        }
+    }
+    .restoreBtn {
+        // button {
+        //     height: 40px;
+        //     background-color: $theme-color;
+        //     border: 0;
+        //     color: #fff;
+        //     padding: 10px;
+        //     cursor: pointer;
+        //     min-width: 180px;
+        //     font-weight: bold;
+        //     border-radius: 4px;
+        //     font-size: 16px;
+        // }
+    }
+
+    // .Img404 {
+    //     svg {
+    //         width: 100%;
+    //         height: 100%;
+    //     }
+    // }
+    .Img404 {
+        svg {
+            width: 499px;
+            height: 271px;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .errorPage {
+        .Img404 {
+            svg {
+                width: 250px;
+                height: 171px;
+            }
+        }
+    }
+    .error-col-1 {
+        order: 2;
+    }
+    .error-col-2 {
+        order: 1;
+    }
+}

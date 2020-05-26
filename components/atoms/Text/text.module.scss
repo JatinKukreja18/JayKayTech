@@ -1,0 +1,47 @@
+@import '../../../variables.scss';
+p.text {
+    margin-bottom: 20px;
+
+    // margins
+    &.xs {
+        margin-bottom: 10px;
+    }
+    &.sm {
+        margin-bottom: 20px;
+    }
+    &.md {
+        margin-bottom: 30px;
+    }
+    &.lg {
+        margin-bottom: 40px;
+    }
+    &.xl {
+        margin-bottom: 60px;
+    }
+    &.none {
+        margin-bottom: 0;
+    }
+    // colors
+    &.dark {
+        color: $text;
+    }
+    &.light {
+        color: #fff;
+    }
+
+    // Alignment
+    &.right {
+        text-align: right;
+    }
+    &.left {
+        text-align: left;
+    }
+    &.center {
+        text-align: center;
+    }
+
+    // letter styling
+    &.capitalize {
+        text-transform: capitalize;
+    }
+}
