@@ -6,7 +6,7 @@ import Link from 'next/link'
 const BlogHome = props => (
   <div>
     <img src={props.home.data.image.url} alt="avatar image" />
-    <h1>{RichText.asText(props.home.data.headline)}</h1>
+    <h1>a {RichText.asText(props.home.data.headline)}</h1>
     <p>{RichText.asText(props.home.data.description)}</p>
 
     <ul>
@@ -29,6 +29,9 @@ BlogHome.getInitialProps = async context => {
     Prismic.Predicates.at('document.type', 'post'),
     { orderings: '[my.post.date desc]' }
   )
+  if (context.res) {
+    context.res.setHeader('Cache-Control', 's-maxage=1, stale-while-revalidate')
+  }
 
   return { home, posts }
 }
