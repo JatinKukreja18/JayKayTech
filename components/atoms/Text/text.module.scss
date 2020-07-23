@@ -23,12 +23,17 @@ p.text {
     }
     // colors
     &.dark {
-        color: $text;
+        color: $black;
     }
     &.light {
         color: #fff;
     }
-
+    &.red{
+        color: $brand-red;
+    }
+    &.gray{
+        color: $mid-gray;
+    }
     // Alignment
     &.right {
         text-align: right;

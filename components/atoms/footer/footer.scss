@@ -1,7 +1,7 @@
 @import '../../variables.scss';
 .footer {
     background: $new-gray;
-    color: $text;
+    color: $black;
     font-family: $font-family;
     padding: 40px 0;
     font-size: 16px;
@@ -36,12 +36,12 @@
                 font-size: 16px;
                 word-break: break-all;
                 a {
-                    color: $text;
+                    color: $black;
                     // text-transform: uppercase;
                     &:hover {
                         font-weight: 800;
                         text-decoration: none;
-                        color: $theme-color;
+                        color: $brand-red;
                     }
                 }
             }
@@ -91,11 +91,11 @@
                 margin-right: 10px;
             }
             a {
-                color: $text;
+                color: $black;
                 text-transform: capitalize;
                 font-size: 16px;
                 &:hover {
-                    color: $theme-color;
+                    color: $brand-red;
                 }
             }
         }
@@ -154,7 +154,7 @@
     }
 }
 .bottomFooter {
-    background-color: $theme-color;
+    background-color: $brand-red;
     color: $white;
     font-family: $font-family;
     padding: 15px 0;

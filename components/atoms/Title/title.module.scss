@@ -26,13 +26,13 @@
     }
     // color
     &.dark {
-        color: $text;
+        color: $black;
     }
     &.light {
         color: #fff;
     }
     &.red {
-        color: $theme-color;
+        color: $brand-red;
     }
     // Alignment
     &.right {
@@ -47,5 +47,8 @@
     // Letter sizing
     &.capitalize {
         text-transform: capitalize;
+    }
+    &.uppercase{
+        text-transform: uppercase;
     }
 }

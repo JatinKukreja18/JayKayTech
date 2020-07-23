@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import styles from './title.module.scss';
 const Title = props => {
     let markup = '';
-    let classes = `${styles.heading} ${props.theme || 'dark'} ${
-        props.align ? props.align : ''
-    } ${props.spacing ? props.spacing : ''} ${
-        props.capitalize ? 'capitalize' : ''
-    }`;
+    let classes = `${styles.heading} ${styles[props.spacing]} ${styles[props.theme || 'dark']}
+        ${styles[props.align || 'left']}
+        ${props.uppercase ? styles.uppercase : ''}
+        ${props.capitalize ? styles.capitalize : ''}`;
     
     switch (props.tag) {
         case 'h1':

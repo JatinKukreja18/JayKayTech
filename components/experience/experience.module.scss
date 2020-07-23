@@ -1,0 +1,129 @@
+@import '../../variables.scss';
+.experienceContainer{
+    position: relative;
+}
+.experienceListDetail{
+    display: flex;
+    flex-direction: column;
+    // position: absolute;
+    // right: 8.66%;
+    // width: 80%;
+    position: relative;
+    .experienceItem{
+        width: 100%;
+        margin: 0 0 0px 0;
+        // width: 33.33%;
+        text-align: left;
+        position: relative;
+        // padding-top: 40px;
+        transition:0.1s;
+        opacity: 0;
+        position: absolute;
+        transform: translateY(10px);
+        &.active{
+            opacity: 1;
+            transition:.8s;
+        }
+    }
+}
+
+.experienceList{
+    display: flex;
+    flex-direction: column;
+    .experienceItem{
+        width: 100%;
+        padding: 0 0 40px 10px;
+        margin: 0;
+        text-align: left;
+        position: relative;
+        transition: 1s;
+        &::after{
+            content:'';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 2px solid $brand-red;
+            background-color: #fff;
+            position: absolute;
+            left: -20px;
+            top: 5px;
+        }
+        .line{
+            display: inline-block;
+            width: 1px;
+            height:0%;
+            background-color: $mid-gray;
+            position: absolute;
+            left: -15px;
+            bottom: -5px;
+            transition: 1s;
+            transform-origin: bottom;
+        }
+        &:last-child .line, &.slide:last-child .line{
+            height: 0;
+        }
+        &.slide {
+            &::after{
+                transition: .1s;
+                transition-delay: .6s;
+                background-color: $brand-red;
+            }
+            .line{
+            height: 100%;
+           }
+        }
+        &.active{
+            &.slide::after{
+                transform: scale(1.2);
+                transition-delay: 0s;
+            }
+            .content{
+                // transition: .5s;
+                right: 0%;
+                transform: translateX(0%);
+                .extraContent{
+                    opacity: 1;
+                    width: 300px;
+                    height: auto;
+                    transition: opacity .8s;
+                    // transition-delay: .7s;
+                }
+            }
+            .date{
+                // transform: translateY(-16px);
+            }
+        }
+        .content{
+            // opacity: 0;
+            transition: 0s;
+            text-align: left;
+            width: max-content;
+            position: absolute;
+            right: 100%;
+            top: 0;
+            transform: translateX(100%);
+    
+            h3{
+                // display: inline-block;
+                opacity: 1;
+                cursor: pointer;
+            }
+            .extraContent{
+                opacity: 0;
+                width: 0;
+                height: 0;
+                overflow: hidden;
+            }
+        }
+        .date{
+            transition: .3s;
+        }
+    }
+}
+
+@media only screen and (max-width: $screen-xs-max) {
+    .new-banner-wrapper::before {
+        width: 100%;
+        border-color: #ffffff94;
+    }
+}
